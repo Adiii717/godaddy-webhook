@@ -20,7 +20,7 @@ Table of Contents
 Follow the [instructions](https://cert-manager.io/docs/installation/) using the cert manager documentation to install it within your cluster.
 On kubernetes (>= 1.21), the process is pretty straightforward if you use the following commands:
 ```bash
-kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.6.1/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
 ```
 **NOTES**: Check the cert-manager releases note to verify which [version of certmanager](https://cert-manager.io/docs/installation/supported-releases/) is supported with Kubernetes or OpenShift
 ### The Webhook
@@ -54,6 +54,7 @@ to store the Godaddy `API` and `GoDaddy Secret`.
 Next, we will define a `ClusterIssuer` containing the information to access the ACME Letsencrypt Server
 and the DNS provider to be used
 
+[Get Godaddy API key here](https://developer.godaddy.com/keys) 
 ### Secret
 
 - Create a `Secret` containing as key parameter the concatenation of the Godaddy Api and Secret separated by ":"
